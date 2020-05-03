@@ -1,0 +1,1000 @@
+   32  ls -lr
+   33  cd ..
+   34  pwd
+   35  cd ~/w205
+   36  git clone https://github.com/mids-w205-crook/signup-vbeohar.git
+   37  ls -ltr
+   38  cd signup-vbeohar/
+   39  git status
+   40  git branch assignment
+   41  git status
+   42  git checkout assignment
+   43  git status
+   44  ls -ltr
+   45  vi README.md 
+   46  nano README.md 
+   47  ls -ltr
+   48  git status
+   49  vi README.md 
+   50  ls -ltr
+   51  git status
+   52  git add README.md 
+   53  git status
+   54  git commit -m "my new readme" 
+   55  git push origin assignment
+   56  cd ~/w205
+   57  pwd
+   58  l s-ltr
+   59  ls -lte
+   60  ls -ltr
+   61  git clone https://github.com/mids-w205-crook/project-1-vbeohar.git
+   62  cd project-1-vbeohar/
+   63  git status
+   64  git branch assignment
+   65  git status
+   66  git checkout assignment
+   67  git status
+   68  exit
+   69  ls -lt
+   70  cd ~/w205
+   71  curl -L -o annot_fpid.json https://goo.gl/qWiu7d
+   72  curl -L -o lp_data.csv https://goo.gl/FDFPYB
+   73  ls -lr
+   74  jq
+   75  sudo apt update
+   76  clear
+   77  ls -ltr
+   78  head lp_data.csv 
+   79  tail lp_data.csv 
+   80  head -n1 lp_data.csv 
+   81  head -1 lp_data.csv 
+   82  cat lp_data.csv | wc -1
+   83  cat lp_data.csv | wc -l
+   84  cat lp_data.csv | wc
+   85  cat lp_data.csv | sort
+   86  cat lp_data.csv | sort -g
+   87  cat lp_data.csv | sort -n
+   88  cat lp_data.csv | sort -gcat annot_fpid.json | jq .
+   89  cat annot_fpid.json | jq .
+   90  cat annot_fpid.json | jq '.[][]' -r | sort | uniq -c 
+   91  cat annot_fpid.json | jq '.[][]' -r | sort | uniq -c | sort -g
+   92  ls -l
+   93  cd ~/w205
+   94  man sort
+   95  ls -l
+   96  head annot_fpid.json 
+   97  wc -l annot_fpid.json 
+   98  clear
+   99  bq
+  100  clear
+  101  bq query --use_legacy_sql=false 'SELECT count(*) FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+  102  bq query --use_legacy_sql=false 'SELECT count(distinct station_id) FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+  103  bq query --use_legacy_sql=false 'SELECT min(time), max(time) FROM `bigquery-public-data.san_francisco.bikeshare_status`'
+  104  ls -l
+  105  cd project-1-vbeohar/
+  106  ls -l
+  107  git status
+  108  git add Project_1.ipynb 
+  109  git commit 
+  110  git push origin assignment
+  111  git commit 
+  112  git push origin assignment
+  113  ls -lt
+  114  cd w205/
+  115  ls -l
+  116  cd project-1-vbeohar/
+  117  ls -l
+  118  git status
+  119  git add README.md 
+  120  git commit -m "first section of part 1 added"
+  121  git push origin assignment
+  122  ls -lt
+  123  git status
+  124  git add README.md 
+  125  git commit -m "first section of part 1 added, edits"
+  126  git push origin assignment
+  127  git status
+  128  git add README.md 
+  129  git commit -m "first section of part 1 added, edits"
+  130  git push origin assignment
+  131  pwd
+  132  ls -ltr
+  133  cd w205/
+  134  pwd
+  135  ls -ltr
+  136  cd project-1-vbeohar/
+  137  pwd
+  138  ls -lt
+  139  git status
+  140  git add README.md 
+  141  git commit -m 
+  142  git commit -m "updated new queries for part 1"
+  143  git push origin assignment
+  144  vbeohar
+  145  git push origin assignment
+  146  git add README.md 
+  147  git commit -m "updated new queries for part 1"
+  148  git push origin assignment
+  149  git add README.md 
+  150  git commit -m "updated new queries for part 1"
+  151  git push origin assignment
+  152  quit() exit
+  153  exit
+  154  clear
+  155  docker ps
+  156  docker ps -a
+  157  docker ps
+  158  docker ps -a
+  159  docker ps
+  160  docker ps -a
+  161  docker rm 53ac1ef323b6        
+  162  docker rm -f 53ac1ef323b6        
+  163  exit
+  164  ls -ltr
+  165  sudo -R jupyter:jupyter ~/w205
+  166  sudo chown -R jupyter:jupyter ~/w205
+  167  cd ~/w205/course-content/
+  168  git pull --all
+  169  docker run -it --rm -v ~/w205:/w205 midsw205/base:latest bash
+  170  docker run -it  -v ~/w205:/w205 midsw205/base:latest bash
+  171  docker rm -f 4a6e084078f7        
+  172  docker run -it  -v ~/w205:/w205 midsw205/base:latest bash
+  173  docker images
+  174  docker run -it  --rm -v ~/w205:/w205 midsw205/base:latest pwd
+  175  exit
+  176  sudo chown -R jupyter:jupyter ~/w205
+  177  cd ~/w205/course-content/
+  178  git pull -all
+  179  git pull --all
+  180  docker network ls
+  181  clear
+  182  docker network prune
+  183  docker pull midsw205/base:latest
+  184  docker pull midsw205/base:0.1.8
+  185  docker pull midsw205/base:0.1.9
+  186  docker pull redis
+  187  docker-compose
+  188  sudo apt update
+  189  clear
+  190  sudo apt install docker-compose
+  191  docker-compose
+  192  clear
+  193  docker-compose
+  194  clesr
+  195  clear
+  196  docker-compose
+  197  docker run redis
+  198  docker ps -a
+  199  docker rm -f confident_williamson
+  200  docker ps -a
+  201  docker run -d redis
+  202  docker ps -a
+  203  clear
+  204  docker ps -a
+  205  docker run -d --name redis redis
+  206  docker ps -a
+  207  docker run -d --name redis -p 6379:6379 redis
+  208  docker rm -f redis
+  209  docker rm -f 2b3f8994d29e        
+  210  docker run -d --name redis -p 6379:6379 redis
+  211  docker ps -a
+  212  docker rm -f redis
+  213  sudo pip3 install redis
+  214  mkdir ~/w205/redis-standalone
+  215  cd ~/w205/redis-standalone
+  216  cp ../course-content/05-Storing-Data-II/example-0-docker-compose.yml docker-compose.yml
+  217  clear
+  218  ls -ltr
+  219  docker-compose up -d
+  220  docker-compose ps
+  221  docker-compose ps -a
+  222  docker  ps -a
+  223  cd ..
+  224  docker-compose ps
+  225  cd redis-standalone/
+  226  docker-compose ps
+  227  docker-compose logs redis
+  228  clear
+  229  ipython
+  230  docker-compose down
+  231  docker-compose ps
+  232  docker ps -a
+  233  mkdir ~/w205/redis-cluster
+  234  cd ~/w205/redis-cluster
+  235  cp ../course-content/05-Storing-Data-II/example-1-docker-compose.yml docker-compose.yml
+  236  docker-compose up -d
+  237  docker-compose ps
+  238  docker ps -a
+  239  docker-compose logs redis
+  240  clear
+  241  docker-compose exec mids bash
+  242  docker-compose down
+  243  docker-compose ps
+  244  cp ../course-content/05-Storing-Data-II/example-2-docker-compose.yml docker-compose.yml
+  245  docker-compose up -d
+  246  docker-compose exec mids jupyter notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root
+  247  clear
+  248  docker-compose down
+  249  docker ps -a
+  250  cp ../course-content/05-Storing-Data-II/example-3-docker-compose.yml docker-compose.yml
+  251  docker-compose up -d
+  252  docker-compose logs mids
+  253  docker-compose down
+  254  docker ps -a
+  255  cp ../course-content/05-Storing-Data-II/example-4-docker-compose.yml docker-compose.yml
+  256  cd ~/w205/
+  257  curl -L -o trips.csv https://goo.gl/QvHLKe
+  258  ls -ltr
+  259  cd ~/w205/redis-cluster/
+  260  clear
+  261  docker-compose up -d
+  262  docker-compose logs mids
+  263  docker-compose down
+  264  docker ps -a
+  265  exit
+  266  cd cd ~/w205/redis-standalone
+  267  cd ~/w205/redis-standalone
+  268  cd ~/w205/redis-cluster/
+  269  exit
+  270  clear
+  271  ls -ltr
+  272  cd w205/
+  273  ls -l
+  274  cd project-1-vbeohar/
+  275  ls -l
+  276  git add README.md 
+  277  git pull 
+  278  git status
+  279  git add README.md 
+  280  git push origin assignment
+  281  git commit -m "project 1 part 2 section 1 queries"
+  282  git push origin assignment
+  283  clear
+  284  git status
+  285  git commit -m "project 1 part 2 section 1 queries"
+  286  git push origin assignment
+  287  clear
+  288  git status
+  289  git add README.md 
+  290  git commit -m "project 1 part 2 section 1 queries"
+  291  git push origin assignment
+  292  git status
+  293  git add README.md 
+  294  git commit -m "project 1 part 2 section 1 queries"
+  295  git push origin assignment
+  296  ls -ltr
+  297  cd w205/
+  298  ls -l tr
+  299  ls -ltr
+  300  cd project-1-vbeohar/
+  301  ls -ltr
+  302  ls -o
+  303  ls -l
+  304  ls -ltr
+  305  bq query --use_legacy_sql=false 
+  306  bq query --use_legacy_sql=false "SELECT a1.dow_str, FORMAT("%f", (count(*) / (SELECT count(*) FROM `profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view`))) AS Pct_To_Total FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a1 group by a1.dow_str order by Pct_To_Total desc"
+  307  bq query --use_legacy_sql=false "SELECT a1.dow_str, FORMAT(\"%f\", (count(*) / (SELECT count(*) FROM `profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view`))) AS Pct_To_Total FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a1 group by a1.dow_str order by Pct_To_Total desc"
+  308  clear
+  309  bq query --use_legacy_sql=false "SELECT a1.dow_str, FORMAT(\"%f\", (count(*) / (SELECT count(*) FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\`))) AS Pct_To_Total FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a1 group by a1.dow_str order by Pct_To_Total desc"
+  310  bq query --use_legacy_sql=false  "SELECT  EXTRACT(MONTH FROM a.start_date) as trip_month, FORMAT(\"%f\", (count(*) / (SELECT count(*) FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\`))) AS Pct_To_Total FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a  group by trip_month  order by Pct_To_Total desc"
+  311  ls -ltr
+  312  cd w205/
+  313  cd project-1-vbeohar/
+  314  git status
+  315  git add README.md 
+  316  git commit -m "project 1 part 2 additional section queries"
+  317  git push origin assignment
+  318  clear
+  319  bq query --use_legacy_sql=false  "select \
+  320   CASE  \
+  321         \            WHEN duration_min \<= 3 THEN \"3 min or less\"
+  322         \            WHEN duration_min \> 3  and  duration_min \<= 5 THEN \"3 minutes \< duration \<\= 5 minutes\"
+  323         \            WHEN duration_min \> 5  and  duration_min \<= 10 THEN \"5 minutes \< duration \<\= 10 minutes\"
+  324         \            WHEN duration_min \> 10  and  duration_min \<= 20 THEN \"10 minutes \< duration \<\= 20 minutes\"
+  325         \            WHEN duration_min \> 20  and  duration_min \<= 30 THEN \"20 minutes \< duration \<\= 30 minutes\"
+  326         \            WHEN duration_min \> 30 THEN \"\> 30 min\"
+  327         \            END AS duration_min_slots,
+  328         \ FORMAT(\"%f\", (count(*) / (SELECT count(*) FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\`))) AS Pct_To_Total
+  329         \ FROM 
+  330         \     \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a
+  331         \ where 
+  332         \       start_station_name \<\> end_station_name
+  333         \ group by duration_min_slots
+  334         \ ORDER BY Pct_To_Total desc"
+  335  clear
+  336  bq query --use_legacy_sql=false  "select \
+  337   CASE  \
+  338         \            WHEN duration_min \<= 3 THEN \"3 min or less\"
+  339         \            WHEN duration_min \> 3  and  duration_min \<= 5 THEN \"3 minutes \< duration \<\= 5 minutes\"
+  340         \            WHEN duration_min \> 5  and  duration_min \<= 10 THEN \"5 minutes \< duration \<\= 10 minutes\"
+  341         \            WHEN duration_min \> 10  and  duration_min \<= 20 THEN \"10 minutes \< duration \<\= 20 minutes\"
+  342         \            WHEN duration_min \> 20  and  duration_min \<= 30 THEN \"20 minutes \< duration \<\= 30 minutes\"
+  343         \            WHEN duration_min \> 30 THEN \"\> 30 min\"
+  344         \            END AS duration_min_slots,
+  345         \ FORMAT(\"%f\", (count(*) / (SELECT count(*) FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\`))) AS Pct_To_Total
+  346         \ FROM 
+  347         \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a
+  348         \ where 
+  349         \       start_station_name \<\> end_station_name
+  350         \ group by duration_min_slots
+  351         \ ORDER BY Pct_To_Total desc"
+  352  clear
+  353  bq query --use_legacy_sql=false  "select
+  354   CASE 
+  355                     WHEN duration_min <= 3 THEN \"3 min or less\"
+  356                     WHEN duration_min > 3  and  duration_min <= 5 THEN \"3 minutes < duration <= 5 minutes\"
+  357                     WHEN duration_min > 5  and  duration_min <= 10 THEN \"5 minutes < duration <= 10 minutes\"
+  358                     WHEN duration_min > 10  and  duration_min <= 20 THEN \"10 minutes < duration <= 20 minutes\"
+  359                     WHEN duration_min > 20  and  duration_min <= 30 THEN \"20 minutes < duration <= 30 minutes\"
+  360                     WHEN duration_min > 30 THEN "> 30 min"
+  361                     END AS duration_min_slots,
+  362          FORMAT(\"%f\", (count(*) / (SELECT count(*) FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\`))) AS Pct_To_Total                   
+  363          FROM 
+  364              \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a
+  365          where 
+  366                start_station_name <> end_station_name
+  367          group by duration_min_slots
+  368          ORDER BY Pct_To_Total desc"
+  369  clear
+  370  bq query --use_legacy_sql=false  "select
+  371   CASE 
+  372                     WHEN duration_min <= 3 THEN \"3 min or less\"
+  373                     WHEN duration_min > 3  and  duration_min <= 5 THEN \"3 minutes < duration <= 5 minutes\"
+  374                     WHEN duration_min > 5  and  duration_min <= 10 THEN \"5 minutes < duration <= 10 minutes\"
+  375                     WHEN duration_min > 10  and  duration_min <= 20 THEN \"10 minutes < duration <= 20 minutes\"
+  376                     WHEN duration_min > 20  and  duration_min <= 30 THEN \"20 minutes < duration <= 30 minutes\"
+  377                     WHEN duration_min > 30 THEN "> 30 min"
+  378                     END AS duration_min_slots,
+  379          FORMAT(\"%f\", (count(*) / (SELECT count(*) FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\`))) AS Pct_To_Total                   
+  380          FROM 
+  381              \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a
+  382          where 
+  383                start_station_name <> end_station_name
+  384          group by duration_min_slots
+  385          ORDER BY Pct_To_Total desc"
+  386  clear
+  387  bq query --use_legacy_sql=false  "select CASE WHEN duration_min <= 3 THEN \"3 min or less\"WHEN duration_min > 3  and  duration_min <= 5 THEN \"3 minutes < duration <= 5 minutes\" WHEN duration_min > 5  and  duration_min <= 10 THEN \"5 minutes < duration <= 10 minutes\"WHEN duration_min > 10  and  duration_min <= 20 THEN \"10 minutes < duration <= 20 minutes\" WHEN duration_min > 20  and  duration_min <= 30 THEN \"20 minutes < duration <= 30 minutes\" WHEN duration_min > 30 THEN "> 30 min" END AS duration_min_slots, FORMAT(\"%f\", (count(*) / (SELECT count(*) FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\`))) AS Pct_To_Total FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a where  start_station_name <> end_station_name group by duration_min_slots ORDER BY Pct_To_Total desc"
+  388  bq query --use_legacy_sql=false  "select
+  389   CASE 
+  390                     WHEN duration_min <= 3 THEN \"3 min or less\"
+  391                     WHEN duration_min > 3  and  duration_min <= 5 THEN \"3 minutes < duration <= 5 minutes\"
+  392                     WHEN duration_min > 5  and  duration_min <= 10 THEN \"5 minutes < duration <= 10 minutes\"
+  393                     WHEN duration_min > 10  and  duration_min <= 20 THEN \"10 minutes < duration <= 20 minutes\"
+  394                     WHEN duration_min > 20  and  duration_min <= 30 THEN \"20 minutes < duration <= 30 minutes\"
+  395                     WHEN duration_min > 30 THEN "> 30 min"
+  396                     END AS duration_min_slots,
+  397          FORMAT(\"%f\", (count(*) / (SELECT count(*) FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\`))) AS Pct_To_Total                   
+  398          FROM 
+  399              \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a
+  400          where 
+  401                start_station_name <> end_station_name
+  402          group by duration_min_slots
+  403          ORDER BY Pct_To_Total desc"
+  404  bq query --use_legacy_sql=false  "select
+  405   CASE 
+  406                     WHEN duration_min \<\= 3 THEN \"3 min or less\"
+  407                     WHEN duration_min \> 3  and  duration_min \<\= 5 THEN \"3 minutes \< duration \<\= 5 minutes\"
+  408                     WHEN duration_min \> 5  and  duration_min \<\= 10 THEN \"5 minutes \< duration \<\= 10 minutes\"
+  409                     WHEN duration_min \> 10  and  duration_min \<\= 20 THEN \"10 minutes \< duration \<\= 20 minutes\"
+  410                     WHEN duration_min \> 20  and  duration_min \<\= 30 THEN \"20 minutes \< duration \<\= 30 minutes\"
+  411                     WHEN duration_min \> 30 THEN \"\> 30 min\"
+  412                     END AS duration_min_slots,
+  413          FORMAT(\"%f\", (count(*) \/ (SELECT count(*) FROM \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\`))) AS Pct_To_Total                   
+  414          FROM 
+  415              \`profound-surf-264703.bike_trip_data.bike_trip_distance_duration_station_view\` a
+  416          where 
+  417                start_station_name \<\> end_station_name
+  418          group by duration_min_slots
+  419          ORDER BY Pct_To_Total desc"
+  420  git add README.md 
+  421  git commit -m "project 1 part 2 additional section queries"
+  422  git push origin assignment
+  423  pwd
+  424  ls -ltr
+  425  cd w205/
+  426  ls -ltr
+  427  cd project-1-vbeohar/
+  428  ls -l
+  429  git add README.md 
+  430  git add Project_1.ipynb 
+  431  git commit -m "updated new queries and ipynb file for section 3" 
+  432  git push origin assignment
+  433  ls -ltr
+  434  cd w205/
+  435  cd project-1-vbeohar/
+  436  ls -l
+  437  git add README.md 
+  438  git add P
+  439  git add Project_1.ipynb 
+  440  git commit -m "final project submission - both files"  
+  441  git push origin assignment 
+  442  clear
+  443  git add README.md 
+  444  pwd
+  445  cd w205/
+  446  ls -l
+  447  cd project-1-vbeohar/
+  448  ls -l
+  449  git add README.md 
+  450  git add Project_1.ipynb 
+  451  git commit -m "updated new queries and ipynb file for section 3" 
+  452  git push origin assignment
+  453  quit
+  454  exit
+  455  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic foo --from-beginning --max-messages 42
+  456  pwd
+  457  ls -l
+  458  cd w205/
+  459  pwd
+  460  ls -l
+  461  cd project-1-vbeohar/
+  462  cd ..
+  463  cd kafka/
+  464  ls -l
+  465  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic foo --from-beginning --max-messages 42
+  466  cd .
+  467  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic foo --from-beginning --max-messages 10
+  468  docker-compose logs -f kafka
+  469  cd kafka/
+  470  docker-compose logs -f kafka
+  471  clear
+  472  ls -l tr
+  473  ls -ltr
+  474  sudo chown -R jupyter:jupyter ~/w205
+  475  cd ~/w205/course-content
+  476  git pull --all
+  477  docker network ls
+  478  docker network prune
+  479  docker network ls
+  480  docker ps -a
+  481  docker pull midsw205/base:latest
+  482  docker pull midsw205/base:0.1.8
+  483  docker pull midsw205/base:0.1.9
+  484  docker pull redis
+  485  docker pull confluentinc/cp-zookeeper:latest
+  486  docker pull confluentinc/cp-kafka:latest
+  487  docker pull midsw205/spark-python:0.0.5
+  488  docker pull midsw205/spark-python:0.0.6
+  489  docker pull midsw205/hadoop:0.0.2
+  490  docker pull midsw205/presto:0.0.1
+  491  clear
+  492  ls -ltr
+  493  cd tutorials/
+  494  l s-l
+  495  ls -l
+  496  cd ~/w205
+  497  ls -l
+  498  cd signup-vbeohar/
+  499  ls -l
+  500  cd ..
+  501  mkdir ~/w205/kafka
+  502  ls -l
+  503  pwd
+  504  cd ~/w205/kafka
+  505  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/kafka/
+  506  ls -l
+  507  pwd
+  508  docker-compose up -d
+  509  docker-compose ps
+  510  docker-compose logs zookeeper | grep -i binding
+  511  docker-compose logs kafka | grep -i started
+  512  clear
+  513  docker-compose logs zookeeper | grep -i binding
+  514  docker-compose logs kafka | grep -i started
+  515  docker-compose up -d
+  516  docker-compose ps
+  517  docker-compose logs kafka | grep -i started
+  518  docker-compose logs kafka
+  519  clear
+  520  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  521  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  522  seq 20
+  523  seq 42
+  524  clear
+  525  docker-compose exec kafka bash -c "seq 42 | kafka-console-producer --request-required-acks 1 --broker-list localhost:29092 --topic foo && echo 'Produced 42 messages.'"
+  526  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic foo --from-beginning --max-messages 42
+  527  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic foo --from-beginning --max-messages 10
+  528  docker-compose exec kafka kafka-console-consumer --bootstrap-server localhost:29092 --topic foo --from-beginning --max-messages 3
+  529  docker-compose down
+  530  curl -L -o github-example-large.json https://goo.gl/Y4MD58
+  531  docker-compose up -d
+  532  docker-compose logs -f kafka
+  533  clear
+  534  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  535  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  536  clear
+  537  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json"
+  538  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.'"
+  539  clear
+  540  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c"
+  541  clear
+  542  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c"
+  543  clear
+  544  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  545  docker-compose exec mids bash -c "cat /w205/kafka/github-example-large.json |  kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  546  docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:29092 --topic foo --from-beginning --max-messages 42
+  547  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e"
+  548  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t foo -o beginning -e" | wc -l
+  549  docker-compose down
+  550  cd ..
+  551  ls -l
+  552  git clone https://github.com/mids-w205-crook/project-2-vbeohar.git
+  553  ls -l
+  554  cd project-2-vbeohar/
+  555  git status
+  556  git branch assignment
+  557  git checkout assignment
+  558  git status
+  559  ls -l
+  560  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/w205/project-2-vbeohar
+  561  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/project-2-vbeohar
+  562  docker-compose up -d
+  563  pwd
+  564  ls -lte
+  565  ls -ltr
+  566  cd w205/
+  567  ls -l
+  568  cd project-2-vbeohar/
+  569  ls -l
+  570  pwd
+  571  git status
+  572  pwd
+  573  clear
+  574  pwd
+  575  ls -l
+  576  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/project-2-vbeohar
+  577  ls -l
+  578  docker-compose up -d
+  579  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+  580  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  581  docker-compose exec kafka kafka-topics --describe --topic assessments --zookeeper zookeeper:32181
+  582  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json"
+  583  clear
+  584  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.'"
+  585  clear
+  586  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c"
+  587  clear
+  588  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+  589  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments   -o beginning -e"
+  590  clear
+  591  ip
+  592  ipaddress
+  593  telnet
+  594  clear
+  595  cd ~/w205/spark-with-kafka
+  596  cd ..
+  597  head github-example-large.json 
+  598  grep -i sha github-example-large.json 
+  599  sudo chown -R jupyter:jupyter ~/w205
+  600  cd ~/w205/course-content
+  601  git pull --all
+  602  docker ps -a
+  603  docker rm -f 996a63d0604e
+  604  docker rm -f 2ca9517ae44a
+  605  docker rm -f 9de9aa9896a1
+  606  docker ps -a
+  607  docker network ls
+  608  docker network prune
+  609  clear
+  610  docker pull midsw205/base:latest
+  611  docker pull midsw205/base:0.1.8
+  612  docker pull midsw205/base:0.1.9
+  613  docker pull redis
+  614  docker pull confluentinc/cp-zookeeper:latest
+  615  docker pull confluentinc/cp-kafka:latest
+  616  docker pull midsw205/spark-python:0.0.5
+  617  docker pull midsw205/spark-python:0.0.6
+  618  docker pull midsw205/cdh-minimal:latest
+  619  docker pull midsw205/hadoop:0.0.2
+  620  docker pull midsw205/presto:0.0.1
+  621  clear
+  622  ping
+  623  ifconfig
+  624  docker network ls
+  625  hostname -I
+  626  ifconfig
+  627  curl ifconfig.me
+  628  clear
+  629  mkdir ~/w205/spark-with-kafka
+  630  cd ~/w205/spark-with-kafka
+  631  cp ~/w205/course-content/07-Sourcing-Data/docker-compose.yml .
+  632  docker-compose up -d
+  633  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  634  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  635  docker-compose exec kafka bash -c "seq 42 | kafka-console-producer --request-required-acks 1 --broker-list kafka:29092 --topic foo && echo 'Produced 42 messages.'"
+  636  docker-compose exec spark pyspark
+  637  docker-compose down
+  638  docker-compose ps
+  639  docker-compose ps -a
+  640  docker network ls
+  641  clear
+  642  cd ~/w205
+  643  curl -L -o github-example-large.json https://goo.gl/Y4MD58
+  644  head github-example-large.json 
+  645  cd ~/w205/spark-with-kafka
+  646  docker-compose up -d
+  647  docker compose ps
+  648  docker ps -as
+  649  docker ps -a
+  650  docker network ls
+  651  clear
+  652  docker-compose exec kafka kafka-topics --create --topic foo --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  653  docker-compose exec kafka kafka-topics --describe --topic foo --zookeeper zookeeper:32181
+  654  docker-compose exec mids bash -c "cat /w205/github-example-large.json"
+  655  docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.'"
+  656  docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c"
+  657  clear
+  658  docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t foo && echo 'Produced 100 messages.'"
+  659  docker-compose exec spark pyspark
+  660  pwd
+  661  cd ..
+  662  ls -lt
+  663  cd project-2-vbeohar/
+  664  cp ~/w205/course-content/07-Sourcing-Data/docker-compose.yml .
+  665  clear
+  666  cat docker-compose.yml 
+  667  clear
+  668  ls -l
+  669  cd ,,
+  670  cd ..
+  671  ls -l
+  672  cd project-2-vbeohar/
+  673  exit
+  674  logs -f
+  675  cd ~/w205/spark-with-kafka
+  676  cd ~/w205/spark-with-kafka
+  677  docker-compose logs -f kafka
+  678  sudo chown -R jupyter:jupyter ~/w205
+  679  cd ~/w205/course-content
+  680  git pull --all
+  681  cd
+  682  docker ps -a
+  683  clear
+  684  docker ps -a
+  685  docker rm -f   "docker-entrypoint.s…"   9 days ago          Exited (0) 9 days ago                         sparkwithkafka_spark_1
+  686  docker rm -f 8885dcd7ee3b        
+  687  docker rm -f faa8899760b0        
+  688  docker rm -f 0d1acc6a5f63        
+  689  docker rm -f d4ebdede91b5        
+  690  docker network ls
+  691  docker network prune
+  692  docker network ls
+  693  docker ps -a
+  694  docker pull midsw205/base:latest
+  695  docker pull midsw205/base:0.1.8
+  696  docker pull midsw205/base:0.1.9
+  697  docker pull redis
+  698  docker pull confluentinc/cp-zookeeper:latest
+  699  docker pull confluentinc/cp-kafka:latest
+  700  docker pull midsw205/spark-python:0.0.5
+  701  docker pull midsw205/spark-python:0.0.6
+  702  docker pull midsw205/cdh-minimal:latest
+  703  docker pull midsw205/hadoop:0.0.2
+  704  docker pull midsw205/presto:0.0.1
+  705  ls -l
+  706  cd w205/
+  707  ls -l
+  708  cd spark-with-kafka/
+  709  ls -l
+  710  clear
+  711  mkdir ~/w205/spark-with-kafka-and-hdfs
+  712  cd ~/w205/spark-with-kafka-and-hdfs
+  713  cp ~/w205/course-content/08-Querying-Data/docker-compose.yml .
+  714  cd ~/w205
+  715  curl -L -o players.json https://goo.gl/vsuCpZ
+  716  cd ~/w205/spark-with-kafka-and-hdfs
+  717  docker-compose up -d
+  718  docker-compose logs -f kafka
+  719  docker-compose exec cloudera hadoop fs -ls /tmp/
+  720  docker-compose exec kafka kafka-topics --create --topic players --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  721  raw_players.cache() ;;
+  722  raw_players.cache() ;
+  723  raw_players.printSchema() ;
+  724  docker-compose exec cloudera hadoop fs -ls /tmp/
+  725  docker-compose exec kafka kafka-topics --create --topic players --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  726  docker-compose exec mids bash -c "cat /w205/players.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t players"
+  727  docker-compose exec spark pyspark
+  728  docker-compose exec cloudera hadoop fs -ls /tmp/
+  729  docker-compose down
+  730  docker ps -a
+  731  docker-compose exec cloudera hadoop fs -ls /tmp/commits/
+  732  cd ..
+  733  pwd
+  734  cd project-2-vbeohar/
+  735  ls -l
+  736  git status
+  737  ls -l
+  738  cp ~/w205/course-content/08-Querying-Data/docker-compose.yml .
+  739  cd w205/spark-with-kafka
+  740  cd ,,
+  741  cd ..
+  742  cd spark-with-kafka-and-hdfs/
+  743  docker-compose exec cloudera hadoop fs -ls /tmp/
+  744  docker-compose exec cloudera hadoop fs -ls /tmp/players/
+  745  clear
+  746  docker-compose exec cloudera hadoop fs -ls /tmp/
+  747  docker-compose exec cloudera hadoop fs -ls /tmp/extracted_players/
+  748  cd ..
+  749  ls -l
+  750  cd spark-with-kafka-and-hdfs/
+  751  docker-compose exec kafka kafka-topics --create --topic commits --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  752  docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t commits"
+  753  cd ~/w205
+  754  docker-compose exec mids bash -c "cat /w205/github-example-large.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t commits"
+  755  pwd
+  756  cd spark-with-kafka-and-hdfs/
+  757  raw_commits = spark.read.format("kafka").option("kafka.bootstrap.servers", "kafka:29092").option("subscribe","commits").option("startingOffsets", "earliest").option("endingOffsets", "latest").load() 
+  758  ls -l
+  759  cd ~/w205/flask-with-kafka
+  760  docker-compose exec mids curl http://localhost:5000/
+  761  docker-compose exec mids curl http://localhost:5000/purchase_a_sword
+  762  docker-compose exec mids curl http://localhost:5000/vaib
+  763  cd ~/w205/flask-with-kafka
+  764  docker-compose exec kafka kafka-topics --create --topic events --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  765  Created topic "events".
+  766  cp ~/w205/course-content/09-Ingesting-Data/basic_game_api.py .
+  767  docker-compose exec mids env FLASK_APP=/w205/flask-with-kafka/basic_game_api.py flask run
+  768  cp ~/w205/course-content/09-Ingesting-Data/game_api.py .
+  769  docker-compose exec mids env FLASK_APP=/w205/flask-with-kafka/game_api.py flask run
+  770  sudo chown -R jupyter:jupyter ~/w205
+  771  cd ~/w205/course-content
+  772  git pull --all
+  773  cd
+  774  ls -l
+  775  docker ps -a
+  776  docker rm -f xxxxx
+  777  docker ps -a
+  778  docker network ls
+  779  docker network prune
+  780  docker pull midsw205/base:latest
+  781  docker pull midsw205/base:0.1.8
+  782  docker pull midsw205/base:0.1.9
+  783  docker pull redis
+  784  docker pull confluentinc/cp-zookeeper:latest
+  785  docker pull confluentinc/cp-kafka:latest
+  786  docker pull midsw205/spark-python:0.0.5
+  787  docker pull midsw205/spark-python:0.0.6
+  788  docker pull midsw205/cdh-minimal:latest
+  789  docker pull midsw205/hadoop:0.0.2
+  790  docker pull midsw205/presto:0.0.1
+  791  clear
+  792  mkdir ~/w205/flask-with-kafka
+  793  cd ~/w205/flask-with-kafka
+  794  cp ~/w205/course-content/09-Ingesting-Data/docker-compose.yml .
+  795  docker-compose up -d
+  796  docker network ls
+  797  telnet
+  798  sudo apt-get install telnet
+  799  telnet google.com 80
+  800  telnet
+  801  telnet google.com 80
+  802  openssl
+  803  openssl s_client -connect google.com:443
+  804  openssl s_client -connect api.wheretheiss.at:443
+  805  docker-compose exec mids curl http://localhost:5000/
+  806  docker-compose exec mids curl http://localhost:5000/purchase_a_sword
+  807  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t events -o beginning -e"
+  808  ls -l
+  809  cd w205/
+  810  ls -l
+  811  cd project-2-vbeohar/
+  812  git status
+  813  pwd
+  814  ls -l
+  815  pwd
+  816  clear
+  817  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205//home/jupyter/w205/project-2-vbeohar
+  818  pwd
+  819  pwdls -l
+  820  ls -l
+  821  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205//home/jupyter/w205/project-2-vbeohar/
+  822  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/project-2-vbeohar/
+  823  docker ps -a
+  824  docker network prune
+  825  docker ps -a
+  826  clear
+  827  docker-compose down
+  828  docke ps -a
+  829  docker ps -a
+  830  docker network rm bdd934e92445 c6e7b795f9a3 e8c5e0943e0a        
+  831  d
+  832  LS -L
+  833  ls -l
+  834  cd w205/
+  835  ls -l
+  836  cd project-2-vbeohar/
+  837  docker network ls
+  838  docker prune 
+  839  docker container ls -a
+  840  docker container rm bdd934e92445 c6e7b795f9a3 e8c5e0943e0
+  841  l -l
+  842  ls -l
+  843  cd ..
+  844  pwd
+  845  ls -l
+  846  cd ~/w205/kafka
+  847  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/kafka/
+  848  docker-compose up -d
+  849  docker-compose ps
+  850  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  851  docker-compose exec kafka kafka-topics --describe --topic assessments --zookeeper zookeeper:32181
+  852  ls -l
+  853  pwd
+  854  cd ..
+  855  docker ps -a
+  856  pwd
+  857  cd project-2-vbeohar/
+  858  ls -l
+  859  git status
+  860  clear
+  861  pwd
+  862  ls -l
+  863  cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/project-2-vbeohar
+  864  l s-l
+  865  ls -l
+  866  docker-compose up -d
+  867  docker ls -a
+  868  docker ps -a
+  869  docker network rm project2vbeohar_kafka_1 project2vbeohar_zookeeper_1  project2vbeohar_mids_1 kafka_kafka_1 kafka_zookeeper_1 kafka_mids_1
+  870  docker container rm project2vbeohar_kafka_1 project2vbeohar_zookeeper_1  project2vbeohar_mids_1 kafka_kafka_1 kafka_zookeeper_1 kafka_mids_1
+  871  docker-compose down
+  872  docker ps -a
+  873  docker container rm project2vbeohar_kafka_1 project2vbeohar_zookeeper_1  project2vbeohar_mids_1 kafka_kafka_1 kafka_zookeeper_1 kafka_mids_1
+  874  docker network proune
+  875  docker network prune
+  876  docker ps -a
+  877  docker container rm kafka_kafka_1
+  878  docker-compose down
+  879  cd ..
+  880  cd kafka/
+  881  docker-compose down
+  882  docker ps -a
+  883  cd ../project-2-vbeohar/
+  884  ls -l
+  885  docker-compose up -d
+  886  docker ps -a
+  887  clear
+  888  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+  889  ls -l
+  890  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  891  docker-compose exec kafka kafka-topics --describe --topic assessments --zookeeper zookeeper:32181
+  892  ls-l
+  893  ls -l
+  894  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json"
+  895  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.'"
+  896  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c"
+  897  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessment"
+  898  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e"
+  899  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e" | wc -l
+  900  docker-compose down
+  901  docker ps-a
+  902  docker ps -a
+  903  clear
+  904  ls -l
+  905  cp ~/w205/course-content/07-Sourcing-Data/docker-compose.yml .
+  906  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+  907  ls -l
+  908  docker-compose up -d
+  909  docker ps -a
+  910  docker network ls
+  911  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  912  ls -l
+  913  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+  914  docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e"
+  915  docker-compose exec spark bash
+  916  ls -l
+  917  cd ..
+  918  ls -l
+  919  lear
+  920  clear
+  921  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root' pyspark
+  922  cd project-2-vbeohar/
+  923  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root' pyspark
+  924  docker-compose down
+  925  ls -l
+  926  docker ps -a
+  927  exit
+  928  docker-compose exec spark pyspark
+  929  ls -l
+  930  cd w205/project-2-vbeohar/
+  931  docker-compose exec spark pyspark
+  932  exit
+  933  ls -l
+  934  cd w205/
+  935  ls -l
+  936  cd project-2-vbeohar/
+  937  ls -l
+  938  dockerps -a
+  939  docker ps -a 
+  940  docker network rm flaskwithkafka_kafka_1
+  941  ls -l
+  942  clear
+  943  ls -l
+  944  cd w205/project-2-vbeohar/
+  945  ls -l
+  946  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp`
+  947  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+  948  ls -l
+  949  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  950  clear
+  951  ls -l
+  952  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+  953  docker network ls 
+  954  docker ps -a
+  955  clear
+  956  docker ps -a
+  957  docker-compose down
+  958  docker ps -a
+  959  clear
+  960  docker-compose up -d
+  961  docker-compose exec cloudera hadoop fs -ls /tmp/
+  962  ls -l
+  963  cp ~/w205/course-content/08-Querying-Data/docker-compose.yml .
+  964  docker-compose up -d
+  965  docker network ls
+  966  docker ps -a
+  967  docker-compose down
+  968  docker-compose exec cloudera hadoop fs -ls /tmp/
+  969  docker-compose down
+  970  pwd
+  971  ls -l
+  972  docker-compose down
+  973  docker network ls 
+  974  docker ps -a
+  975  docker-compose up -d
+  976  docker-compose exec cloudera hadoop fs -ls /tmp/
+  977  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+  978  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+  979  docker-compose exec spark pyspark
+  980  clear
+  981  docker ps -a
+  982  docker-compose down
+  983  ls -l
+  984  docker-compose up -d
+  985  docker-compose exec spark bash
+  986  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root' pyspark
+  987  ls -l
+  988  cd w205/
+  989  ls -l
+  990  cd project-2-vbeohar/
+  991  ls -l
+  992  clear
+  993  pwd
+  994  cp ~/w205/course-content/08-Querying-Data/docker-compose.yml .
+  995  docker ps -a
+  996  docker-compose up -d
+  997  docker-compose exec spark bash
+  998  clear
+  999  docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root' pyspark
+ 1000  clear
+ 1001  ls -l
+ 1002  docker ps -a
+ 1003  docker-compose doqn
+ 1004  docker-compose down
+ 1005  docker ps -a
+ 1006  clear
+ 1007  ls -l
+ 1008  cd w205/project-2-vbeohar/
+ 1009  ks 0k
+ 1010  ls -l
+ 1011  curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+ 1012  docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+ 1013  pwd
+ 1014  ls -l
+ 1015  docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+ 1016  ls -l
+ 1017  ls -l /tmp
+ 1018  cd /tmp/
+ 1019  ls -l
+ 1020  cd correct_total
+ 1021  ls -l
+ 1022  vi ssh-gNbrgO4miQ/
+ 1023  import subprocess
+ 1024  docker-compose exec cloudera hadoop fs -ls /tmp/
+ 1025  cd
+ 1026  ls -l
+ 1027  cd w205/project-2-vbeohar/
+ 1028  ls -l
+ 1029  docker-compose exec cloudera hadoop fs -ls /tmp/
+ 1030  cd /tmp/assessments
+ 1031  history >history.txt

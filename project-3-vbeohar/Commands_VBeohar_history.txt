@@ -1,0 +1,101 @@
+35.227.142.2 (ephemeral) - network port
+
+
+preparing git directory and checking out branch assignment
+============================================================
+cd ~/w205
+git clone https://github.com/mids-w205-crook/project-3-vbeohar.git
+cd https://github.com/mids-w205-crook/project-3-vbeohar.git
+git status
+git branch assignment
+git checkout assignment
+git status
+
+
+
+cp ~/w205/course-content/12-Querying-Data-II/docker-compose.yml .
+cp ~/w205/course-content/12-Querying-Data-II/game_api.py .
+
+docker-compose up -d
+
+docker-compose ps
+docker ps -a
+docker network ls
+
+create topic events
+=====================
+docker-compose exec kafka kafka-topics --create --topic events --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+
+
+make changes to game_api.py (FLASK web-app accepting user requests)
+=================================================================
+ - buy a sword and join guild
+ - purchase a knife and join guild functions to be added
+ - Add these to game_api.py and make sure indentation is proper
+	@app.route("/purchase_a_knife")
+	def purchase_a_knife():
+	    purchase_knife_event = {'event_type': 'purchase_knife',
+				    'description': 'very sharp knife'}
+	    log_to_kafka('events', purchase_knife_event)
+	    return "Knife Purchased!\n"
+
+
+	@app.route("/join_guild")
+	def join_guild():
+	    join_guild_event = {'event_type': 'join_guild',
+				    'description': 'very good guild'}
+	    log_to_kafka('events', join_guild_event)
+	    return "Guild Joined!\n"
+
+Run FLASK web-server
+=====================
+docker-compose exec mids env FLASK_APP=/w205/project-3-vbeohar/game_api.py flask run --host 0.0.0.0
+
+
+
+Use Apache Bench to generate data and GET HTTP to FLASK
+======================================================
+cd ~/w205/project-3-vbeohar/
+
+docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/
+docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/purchase_a_sword
+docker-compose exec mids ab -n 10 -H "Host: user2.att.com" http://localhost:5000/
+docker-compose exec mids ab -n 10 -H "Host: user2.att.com" http://localhost:5000/purchase_a_sword
+docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/purchase_a_knife
+docker-compose exec mids ab -n 10 -H "Host: user1.comcast.com" http://localhost:5000/join_guild
+
+docker-compose exec mids ab -n 10 -H "Host: user2.att.com" http://localhost:5000/purchase_a_knife
+docker-compose exec mids ab -n 10 -H "Host: user2.att.com" http://localhost:5000/join_guild
+
+
+Create symbolic link for SPARK
+================================
+docker-compose exec spark bash
+ln -s /w205 w205
+exit
+
+
+Spin up a Jupyter notebook
+===========================
+docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root' pyspark
+Copy paste link and replace IP address from the generate link on the console
+
+	 http://0.0.0.0:8888/?token=6945145061eb4323ee4602be474c30ae8bee093b8a6e8761
+
+	 http://35.227.142.2:8888/?token=6945145061eb4323ee4602be474c30ae8bee093b8a6e8761
+
+
+
+docker-compose down
+docker-compose ps
+docker ps -a
+docker network ls
+
+
+
+git add docker-compose.yml
+git add game_api.py
+git add project_3
+
+git commit -m "added files for project 3 submission"
+git push origin assignment

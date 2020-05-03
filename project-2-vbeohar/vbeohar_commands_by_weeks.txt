@@ -1,0 +1,85 @@
+
+project 2 -- week 6
+====================
+git status
+cp ~/w205/course-content/06-Transforming-Data/docker-compose.yml ~/w205/project-2-vbeohar
+docker-compose up -d
+docker-compose ps
+
+curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+
+docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+docker-compose exec kafka kafka-topics --describe --topic assessments --zookeeper zookeeper:32181
+docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json"
+docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.'"
+docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c"
+docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessment"
+docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e"
+docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e" | wc -l
+docker-compose down
+
+
+
+project 2 -- week 7 (external ip address: 34.82.199.69)
+=========================================================
+
+cp ~/w205/course-content/07-Sourcing-Data/docker-compose.yml .
+ls -l
+curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+>>> edited: docker-compose.yml: to include for 8888 for jupyter notebook
+docker-compose up -d
+docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"
+docker-compose exec mids bash -c "kafkacat -C -b kafka:29092 -t assessments -o beginning -e"
+
+docker-compose exec spark bash
+ln -s /w205 w205
+exit
+
+docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root' pyspark
+
+http://0.0.0.0:8888/?token=f12b6534d7716cd0ac456f4a19e5d17a297c36d3eaedbea9
+http://34.82.199.69:8888/?token=f12b6534d7716cd0ac456f4a19e5d17a297c36d3eaedbea9
+
+>> copy paste python code from (https://github.com/kevin-crook-ucb/ucb_w205_crook_supplement/blob/master/2020_Spring/project_2.md)
+>> into jupyter notebook created above
+
+docker-compose exec spark pyspark
+messages = spark.read.format("kafka").option("kafka.bootstrap.servers", "kafka:29092").option("subscribe","foo").option("startingOffsets", "earliest").option("endingOffsets", "latest").load()
+messages.printSchema()
+messages.show()
+messages_as_strings=messages.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
+
+messages_as_strings.show()
+messages_as_strings.printSchema()
+messages_as_strings.count()
+
+messages_as_strings.select('value').take(1)
+messages_as_strings.select('value').take(1)[0].value
+import json
+first_message=json.loads(messages_as_strings.select('value').take(1)[0].value)
+first_message
+print(first_message['commit']['committer']['name'])
+exit()
+
+
+
+
+
+project 3 -- week 8 (external ip address:	35.230.105.251)
+=========================================================
+docker-compose up -d
+docker-compose exec spark bash
+ln -s /w205 w205
+exit
+docker-compose exec spark env PYSPARK_DRIVER_PYTHON=jupyter PYSPARK_DRIVER_PYTHON_OPTS='notebook --no-browser --port 8888 --ip 0.0.0.0 --allow-root' pyspark
+
+http://0.0.0.0:8888/?token=99c8b790f17f5b6bf6597177ddd7eaa0bc8b1c6d093c5f3c
+
+http://35.230.105.251:8888/?token=99c8b790f17f5b6bf6597177ddd7eaa0bc8b1c6d093c5f3c
+
+curl -L -o assessment-attempts-20180128-121051-nested.json https://goo.gl/ME6hjp
+
+docker-compose exec kafka kafka-topics --create --topic assessments --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:32181
+
+docker-compose exec mids bash -c "cat /w205/project-2-vbeohar/assessment-attempts-20180128-121051-nested.json | jq '.[]' -c | kafkacat -P -b kafka:29092 -t assessments"

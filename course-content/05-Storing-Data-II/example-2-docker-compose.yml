@@ -1,0 +1,16 @@
+---
+version: '2'
+services:
+  redis:
+    image: redis:latest
+    expose:
+      - "6379"
+
+  mids:
+    image: midsw205/base:latest
+    stdin_open: true
+    tty: true
+    expose:
+      - "8888"
+    ports:
+      - "8888:8888"
